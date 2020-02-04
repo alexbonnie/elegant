@@ -1,0 +1,761 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.logo-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    height: auto;
+}
+
+/*nav*/
+
+body {
+    overflow-x: hidden;
+}
+
+.menu-opener {
+    cursor: pointer;
+}
+
+.menu-opener-inner {
+    background: #FFF;
+    height: 5px;
+    margin-left: 3px;
+    margin-top: 20px;
+    margin-right: 5%;
+    width: 40px;
+    float: right;
+}
+
+.menu-opener-inner::before,
+.menu-opener-inner::after {
+    background: #FFF;
+    content: '';
+    display: block;
+    height: .35rem;
+    width: 2.5rem;
+}
+
+.menu-opener-inner::before {
+    transform: translateY(-0.75rem);
+}
+
+.menu-opener-inner::after {
+    transform: translateY(0.25rem);
+}
+
+.menu-opener-inner.active {
+    background: transparent;
+}
+
+.menu-opener-inner.active::before {
+    transform: translateY(0rem) rotate(-45deg);
+}
+
+.menu-opener-inner.active::after {
+    transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+}
+
+.menu {
+    color: black;
+    height: 64px;
+    position: absolute;
+    right: 0;
+}
+
+.menu.active .menu-inner {
+    transform: translate(-200px, 0);
+    display: flex;
+}
+
+.menu-inner {
+    padding: 0;
+    margin-top: -15px;
+    right: -80px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    display: none;
+}
+
+.menu.active .menu-link,
+.menu-inner li,
+.menu-inner a {
+    color: #FFF;
+    list-style: none;
+    text-decoration: none;
+    line-height: 2;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 10px;
+}
+
+.menu-inner li:hover {
+    text-decoration: underline;
+}
+
+/*end of nav*/
+
+header > div {
+    background: url('../img/index/cd-intro-bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 700px;
+}
+
+header > div > h1 {
+    height: 81px;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 280px 128px 315px 104px;
+}
+
+h1 > span {
+    font-family: "Open Sans Light", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.arrow-button {
+    display: none;
+    cursor: pointer;
+}
+
+.text {
+    text-align: center;
+    margin: 5% auto;
+    width: 55%;
+}
+
+.text p:first-child {
+    color: #d4af37;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+    text-align: center;
+}
+
+.text h3 {
+    opacity: 0.7;
+    color: #021725;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 2.2px;
+    margin-bottom: 3%;
+}
+
+.text p:last-child {
+    height: auto;
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.9px;
+}
+
+a:focus {
+    outline: none;
+}
+
+.about-section .btn {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+
+.about-section .btn a {
+    border: 1px solid black;
+    padding: 25px 50px;
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.7px;
+    text-decoration: none;
+}
+
+.about-section .btn a:hover {
+    background: #021725;
+    opacity: 0.3;
+    color: whitesmoke;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.show-section .pics {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.show-section .pics div {
+    width: 25%;
+}
+
+.show-section .pics div img {
+    width: 100%;
+    display: block;
+}
+
+.show-section .pics div img:hover {
+    transform: scale(1.2);
+    transition: all 1.5s ease;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.show-section .pics div img:not(:hover) {
+    transition: 2s;
+}
+
+.cards-container {
+    display: flex;
+    width: 51.5%;
+    margin: 5% auto;
+}
+
+.cards-container .card {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: 0 auto;
+}
+
+.cards-container .card:hover {
+    transform: scale(1.1);
+    transition: all 1.5s ease;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.cards-container .card:not(:hover) {
+    transition: 2s;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.content h6 {
+    color: #d4af37;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+}
+
+.content h5 {
+    opacity: 0.7;
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.05px;
+}
+
+.content p {
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.65px;
+    vertical-align: middle;
+}
+
+.last-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    margin: 5% auto;
+}
+
+.last-post > h6 {
+    color: #d4af37;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+}
+
+.last-post > h3 {
+    width: 379px;
+    color: #505d68;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 2.2px;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.last-card {
+    display: flex;
+    justify-content: center;
+}
+
+.last-card div:first-child {
+    height: auto;
+}
+
+.last-card img {
+    width: auto;
+    display: block;
+}
+
+.last-post .card-content {
+    width: 50%;
+    background-color: #f9f9f9;
+    padding: 25px;
+}
+
+.card-content h6 {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+}
+
+.card-content h5 {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.9px;
+}
+
+.card-content p {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24.7px;
+    letter-spacing: 0.8px;
+}
+
+.btn-card a {
+    display: block;
+    border: 1px solid black;
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.7px;
+    padding: 10px 40px;
+    margin: 40px 200px 0 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-card a:hover {
+    background-color: #021725;
+    opacity: 0.5;
+    color: whitesmoke;
+    text-decoration: none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+
+}
+
+.last-button a {
+    border: 1px solid black;
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.7px;
+    text-align: center;
+    padding: 25px 50px;
+    text-decoration: none;
+}
+
+.last-button {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.last-button a:hover {
+    background-color: #021725;
+    opacity: 0.5;
+    color: whitesmoke;
+    text-decoration: none;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.contact .text p {
+    color: #d4af37;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.contact .text h3 {
+    opacity: 0.7;
+    color: #021725;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 2.2px;
+}
+
+.map {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.map img {
+    width: 100%;
+    display: block;
+}
+
+.contact {
+    width: 55%;
+    margin: 7% auto;
+}
+
+.contact-cards {
+    width: 100%;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 4%;
+}
+
+.contact-card div {
+    text-align: center;
+}
+
+.contact-cards h6 {
+    color: #505d68;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 60px;
+    text-transform: uppercase;
+    letter-spacing: 0.65px;
+}
+
+.contact-cards p {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 34px;
+    letter-spacing: 0.57px;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #eeeeee;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5%;
+}
+
+footer p {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: #505d68;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+@media all and (max-width: 750px) {
+
+    .logo-button {
+        background-color: #555a5b;
+        background-blend-mode: multiply;
+        padding: 15px 20px;
+    }
+
+    header > div {
+        background: url('../img/index/mobile/cd-intro_background_img.jpg') no-repeat center fixed;
+        background-size: cover;
+        height: 1000px;
+    }
+
+    .arrow-button {
+        display: block;
+        width: 20%;
+        margin: 0 auto;
+    }
+
+    .arrow {
+        transform: translate(30px, 120px);
+    }
+
+    header > div > h1 {
+        line-height: 80px;
+        font-size: 80px;
+    }
+
+    h1 > span {
+        letter-spacing: 2px;
+        line-height: 80px;
+    }
+
+    .menu-inner {
+        flex-direction: column;
+        margin-top: 50px;
+        right: -190px;
+    }
+
+    .menu-inner li,
+    .menu-inner a {
+        padding: 3px;
+        font-size: 23px;
+    }
+
+    .menu-inner {
+        background: #555a5b;
+        opacity: 0.5;
+        border-radius: 10px;
+    }
+
+    .text {
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    .text p:first-child {
+        font-size: 23px;
+    }
+
+    .text h3 {
+        font-size: 65px;
+        line-height: 70px;
+        margin-bottom: 30px;
+    }
+
+    .text p:last-child {
+
+        height: auto;
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: 100;
+    }
+
+    .about-section .btn {
+        text-align: center;
+    }
+
+    .about-section .btn a {
+        padding: 20px 50px;
+        font-size: 20px;
+    }
+
+    .show-section .pics {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .show-section .pics div {
+        width: 100%;
+    }
+
+    .show-section .pics div img:hover {
+        transform: scale(1.0);
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        width: auto;
+    }
+
+    .cards-container .card {
+        margin: 0;
+        width: auto;
+    }
+
+    .cards-container .card:hover {
+        transform: scale(1.0);
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .content {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .content h6 {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .content h5 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .content p {
+        font-size: 25px;
+        line-height: 40px;
+        padding: 10px;
+    }
+
+    .last-post {
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    .last-post > h6 {
+        font-size: 23px;
+    }
+
+    .last-post > h3 {
+        font-size: 65px;
+        line-height: 70px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .last-card {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .last-card img {
+        width: 100%;
+    }
+
+    .last-post .card-content {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content h6 {
+        font-size: 20px;
+    }
+
+    .card-content h5 {
+        font-size: 45px;
+        padding-bottom: 30px;
+    }
+
+    .card-content p {
+        font-size: 25px;
+        line-height: 40px;
+        font-weight: 100;
+    }
+
+    .last-card .btn-card a {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .last-button {
+        text-align: center;
+    }
+
+    .last-button a {
+        padding: 20px 50px;
+        font-size: 20px;
+    }
+
+    .contact {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .contact-cards {
+        width: auto;
+    }
+
+    .contact .text {
+        margin: 5px auto;
+    }
+
+    .map {
+        width: auto;
+        height: auto;
+    }
+
+    .contact-cards {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .contact-card {
+        padding: 10px;
+    }
+
+    .contact-cards h6 {
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    .contact-cards p {
+        font-size: 20px;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        display: block;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+}

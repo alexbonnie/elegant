@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.logo-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    height: auto;
+}
+
+/*nav*/
+
+body {
+    overflow-x: hidden;
+}
+
+.menu-opener {
+    cursor: pointer;
+}
+
+.menu-opener-inner {
+    background: #FFF;
+    height: 5px;
+    margin-left: 3px;
+    margin-top: 20px;
+    margin-right: 5%;
+    width: 40px;
+    float: right;
+}
+
+.menu-opener-inner::before,
+.menu-opener-inner::after {
+    background: #FFF;
+    content: '';
+    display: block;
+    height: .35rem;
+    width: 2.5rem;
+}
+
+.menu-opener-inner::before {
+    transform: translateY(-0.75rem);
+}
+
+.menu-opener-inner::after {
+    transform: translateY(0.25rem);
+}
+
+.menu-opener-inner.active {
+    background: transparent;
+}
+
+.menu-opener-inner.active::before {
+    transform: translateY(0rem) rotate(-45deg);
+}
+
+.menu-opener-inner.active::after {
+    transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+}
+
+.menu {
+    color: black;
+    height: 64px;
+    position: absolute;
+    right: 0;
+}
+
+.menu.active .menu-inner {
+    transform: translate(-200px, 0);
+    display: flex;
+}
+
+.menu-inner {
+    padding: 0;
+    margin-top: -15px;
+    right: -80px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    display: none;
+}
+
+.menu.active .menu-link,
+.menu-inner li,
+.menu-inner a {
+    color: #FFF;
+    list-style: none;
+    text-decoration: none;
+    line-height: 2;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.menu-inner li:hover {
+    text-decoration: underline;
+}
+
+/*end of nav*/
+
+.arrow-button {
+    display: block;
+    width: 61px;
+    height: 61px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.arrow {
+    transform: translate(10px, 500px);
+}
+
+header > div {
+    background: url('../img/project/header.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 600px;
+}
+
+.container {
+    width: 95%;
+    height: auto;
+    margin: 3% auto;
+    background-color: #f9f9f9;
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container > div:first-child {
+    width: 60%;
+    margin: 1%;
+}
+
+.container .text {
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.container .text h4 {
+    color: #000000;
+    font-family: "Open Sans", sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 2.25px;
+    padding-bottom: 15%;
+}
+
+.container .text p {
+    color: #000000;
+    font-family: "Cardo - Regular", serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 1px;
+}
+
+.container .text p span {
+    font-family: "Cardo - Bold", serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container .big-cards {
+    width: 100%;
+}
+
+.container .big-cards div {
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.big-cards div img {
+    width: 100%;
+    display: block;
+}
+
+.container .small-cards {
+    width: 30%;
+}
+
+.small-cards div {
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.small-cards div img {
+    width: 100%;
+    display: block;
+}
+
+.small-cards div img:hover {
+    transform: scale(1.2);
+    transition: all 1.5s ease;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.small-cards div img:not(:hover) {
+    transition: 2s;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.btn button {
+    text-align: center;
+    padding: 8px 80px;
+    background: none;
+    color: #c0c0c0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.btn button:hover {
+    background-color: #021725;
+    opacity: 0.5;
+    color: whitesmoke;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #eeeeee;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5%;
+}
+
+footer p {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: #505d68;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:focus {
+    outline: none;
+}
+
+@media all and (max-width: 750px) {
+
+    .logo-button {
+        background-color: #555a5b;
+        background-blend-mode: multiply;
+        padding: 15px 20px;
+    }
+
+    header > div {
+        background: url('../img/project/mobile/header.png') no-repeat center fixed;
+        background-size: cover;
+        height: 800px;
+    }
+
+    .arrow {
+        transform: translate(5px, 470px);
+    }
+
+    .menu-inner {
+        flex-direction: column;
+        margin-top: 50px;
+        right: -190px;
+    }
+
+    .menu-inner {
+        background: #555a5b;
+        opacity: 0.5;
+        border-radius: 10px;
+    }
+
+    .menu-inner li,
+    .menu-inner a {
+        padding: 3px;
+        font-size: 23px;
+    }
+
+    .container {
+        width: 95%;
+        flex-direction: column;
+        padding: 5px;
+        margin: 100px auto;
+    }
+
+    .container > div:first-child {
+        width: 100%;
+    }
+
+    .container .text h4 {
+        font-size: 60px;
+        line-height: 45px;
+    }
+
+    .container .text p {
+        font-size: 28px;
+        line-height: 45px;
+    }
+
+    .container .small-cards {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .small-cards div img:hover {
+        transform: scale(1.0);
+    }
+
+    .btns {
+        display: none;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+
+}

@@ -1,0 +1,330 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.logo-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    height: auto;
+}
+
+/*nav*/
+
+body {
+    overflow-x: hidden;
+}
+
+.menu-opener {
+    cursor: pointer;
+}
+
+.menu-opener-inner {
+    background: #FFF;
+    height: 5px;
+    margin-left: 3px;
+    margin-top: 20px;
+    margin-right: 5%;
+    width: 40px;
+    float: right;
+}
+
+.menu-opener-inner::before,
+.menu-opener-inner::after {
+    background: #FFF;
+    content: '';
+    display: block;
+    height: .35rem;
+    width: 2.5rem;
+}
+
+.menu-opener-inner::before {
+    transform: translateY(-0.75rem);
+}
+
+.menu-opener-inner::after {
+    transform: translateY(0.25rem);
+}
+
+.menu-opener-inner.active {
+    background: transparent;
+}
+
+.menu-opener-inner.active::before {
+    transform: translateY(0rem) rotate(-45deg);
+}
+
+.menu-opener-inner.active::after {
+    transform: translateY(-0.5rem) translateX(0rem) rotate(45deg);
+}
+
+.menu {
+    color: black;
+    height: 64px;
+    position: absolute;
+    right: 0;
+}
+
+.menu.active .menu-inner {
+    transform: translate(-200px, 0);
+    display: flex;
+}
+
+.menu-inner {
+    padding: 0;
+    margin-top: -15px;
+    right: -80px;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    display: none;
+}
+
+.menu.active .menu-link,
+.menu-inner li,
+.menu-inner a {
+    color: #FFF;
+    list-style: none;
+    text-decoration: none;
+    line-height: 2;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    padding: 5px;
+}
+
+.menu-inner li:hover {
+    text-decoration: underline;
+}
+
+/*end of nav*/
+
+.arrow-button {
+    display: none;
+    cursor: pointer;
+}
+
+header > div {
+    background: url('../img/about/cd-intro-about-bg.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 700px;
+}
+
+
+.text {
+    width: 70%;
+    margin: 10% auto;
+}
+
+.text p {
+    text-align: center;
+    opacity: 0.7;
+    color: #021725;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+}
+
+.content .pic {
+    width: 100%;
+    height: auto;
+    background: url('../img/about/img.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.content .pic img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content .text-content {
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    background-color: #f9f9f9;
+}
+
+.text-content > div {
+    display: flex;
+}
+
+.text-content h4 {
+    color: #505d68;
+    font-family: "Open Sans - Semibold", sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 1.35px;
+    margin-left: 5%;
+}
+
+.text-content p {
+    height: auto;
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+    width: 60%;
+    margin: 5%;
+}
+
+.text-content ul {
+    color: #505d68;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.9px;
+    list-style-type: none;
+    width: 100%;
+    margin: 5%;
+}
+
+footer {
+    height: 80px;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    color: #505d68;
+    font-family: "Open Sans"sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 34px;
+}
+
+a {
+    text-decoration: none;
+    color: #505d68;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+a:focus {
+    outline: none;
+}
+
+@media all and (max-width: 750px) {
+
+    .logo-button {
+        background-color: #555a5b;
+        background-blend-mode: multiply;
+        padding: 15px 20px;
+    }
+
+    header > div {
+        background: url('../img/about/mobile/SW_CalebMorris1.jpg') no-repeat center fixed;
+        background-size: cover;
+        height: 800px;
+    }
+
+    .arrow-button {
+        display: block;
+        width: 61px;
+        height: 61px;
+        margin: 0 auto;
+    }
+
+    .arrow {
+        transform: translate(10px, 600px);
+    }
+
+    .menu-inner {
+        flex-direction: column;
+        margin-top: 50px;
+        right: -190px;
+    }
+
+    .menu-inner {
+        background: #555a5b;
+        opacity: 0.5;
+        border-radius: 10px;
+    }
+
+    .menu-inner li,
+    .menu-inner a {
+        padding: 3px;
+        font-size: 23px;
+    }
+
+    .text {
+        width: 90%;
+        margin: 100px auto;
+    }
+
+    .text p {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .pic {
+        width: 100%;
+        height: 400px;
+    }
+
+    .content .pic img {
+        display: block;
+    }
+
+    .content .text-content {
+        width: 90%;
+        margin: 0 auto;
+        background: none;
+        padding: 0;
+    }
+
+    .text-content > div {
+        flex-direction: column;
+    }
+
+    .text-content h4 {
+        font-size: 60px;
+        margin: 30px;
+    }
+
+    .text-content p {
+        width: auto;
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .text-content ul {
+        width: auto;
+        font-size: 28px;
+        line-height: 40px;
+        padding-left: 0;
+    }
+
+    footer {
+        width: 100%;
+        height: auto;
+        display: block;
+        text-align: center;
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
+
+}
